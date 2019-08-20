@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChartActivity"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/tv_blood_press"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="血压变化波形图"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_gravity="center"
+        android:paddingTop="5dp"/>
+
+
+
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/blood_press_line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_blood_sugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="血糖变化波形图"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/blood_sugar_line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_red_light"/>
+    <RelativeLayout
+        android:id="@+id/rl_today_date"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_today_blood_press"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="今日血压(mmHg):"
+            android:textSize="15sp"
+            android:paddingTop="15dp"/>
+        <EditText
+            android:id="@+id/et_today_sbp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_today_blood_press"
+            android:hint="收缩压"
+            />
+
+        <TextView
+            android:id="@+id/tv_split"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/et_today_sbp"
+            android:text="/"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp"
+            android:textSize="15sp"/>
+        <EditText
+            android:id="@+id/et_today_dbp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_split"
+            android:hint="舒张压"/>
+
+        <TextView
+            android:id="@+id/tv_today_blood_sugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今日血糖(mmol/L):"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="30dp"
+            android:layout_below="@id/tv_today_blood_press"/>
+        <EditText
+            android:id="@+id/et_today_blood_sugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_today_blood_sugar"
+            android:layout_below="@id/et_today_sbp"
+            android:hint="血糖值"/>
+
+        <Button
+            android:id="@+id/bt_save_today_blood_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_today_blood_sugar"
+            android:text="记录今日数据"
+            android:textSize="18sp"
+            android:background="@android:color/holo_red_light"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

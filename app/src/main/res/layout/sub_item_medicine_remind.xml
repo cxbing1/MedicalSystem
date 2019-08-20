@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Switch
+        android:id="@+id/switch_remind"
+        android:layout_width="60dp"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:id="@+id/tv_medicine_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/switch_remind"
+        android:text="维他命"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_medicine_dose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_medicine_name"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="-26dp"
+        android:layout_toRightOf="@id/switch_remind"
+        android:text="3粒"
+        android:textSize="20sp" />
+
+</RelativeLayout>

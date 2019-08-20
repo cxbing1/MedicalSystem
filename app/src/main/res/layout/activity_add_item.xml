@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/tv_add_medicine_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="药品名称"
+        android:textSize="20sp"
+        android:layout_below="@id/abl"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/et_add_medicine_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_add_medicine_name"/>
+
+    <TextView
+        android:id="@+id/tv_interval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="时间间隔（每隔多少天）"
+        android:textSize="20sp"
+        android:layout_below="@id/et_add_medicine_name"/>
+
+    <EditText
+        android:id="@+id/et_interval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_interval" />
+
+    <TextView
+        android:id="@+id/tv_begin_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始服用时间"
+        android:textSize="20sp"
+        android:layout_below="@id/et_interval"/>
+
+    <EditText
+        android:id="@+id/et_begin_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_begin_time" />
+
+    <TextView
+        android:id="@+id/tv_continue_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="持续时间（天）"
+        android:textSize="20sp"
+        android:layout_below="@id/et_begin_time"/>
+
+    <EditText
+        android:id="@+id/et_continue_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_continue_time" />
+
+    <TextView
+        android:id="@+id/tv_perday_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="每天服药时间"
+        android:textSize="20sp"
+        android:layout_below="@id/et_continue_time"/>
+
+    <EditText
+        android:id="@+id/et_perday_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_perday_time" />
+
+    <TextView
+        android:id="@+id/tv_pertime_dose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="每次剂量"
+        android:textSize="20sp"
+        android:layout_below="@id/et_perday_time"/>
+
+    <EditText
+        android:id="@+id/et_pertime_dose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_pertime_dose" />
+
+    <Button
+        android:id="@+id/bt_add_complete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_pertime_dose"
+        android:layout_marginTop="31dp"
+        android:background="@android:color/holo_red_light"
+        android:text="添加完成"
+        android:textSize="18sp"
+        android:textColor="@android:color/white" />
+
+
+
+
+
+</RelativeLayout>
